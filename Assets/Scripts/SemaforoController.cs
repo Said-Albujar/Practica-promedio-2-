@@ -5,56 +5,44 @@ using UnityEngine;
 public class SemaforoController : MonoBehaviour
 {
     public SemaforoModel model;
-    public float TotalTime=75f;
-    
-    public float ChangeTime;
-    public float timer_done=0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        DescRed();
-        
-    }
+
+    public float ChangeTime;
+    public float timer_done = 0;
+
+
+
     public void DescRed()
     {
-        float t = 40f;
+        float t = model.tiemporojo;
         ChangeTime = t;
         timer_done += Time.deltaTime;
         if (timer_done >= ChangeTime)
-
         {
             
             model.luzroja.SetActive(false);
            if(timer_done >= 75f)
-            {
+           {
                 model.luzroja.SetActive(true);
-                timer_done = 0;
-            }
+                
+           }
             
         }
         
     }
     public void DescAmar()
     {
-        float t = 40f;
+        float t = model.tiempoamar;
         ChangeTime = t;
         timer_done += Time.deltaTime;
         if (timer_done >= ChangeTime)
-
         {
 
-            model.luzamarilla.SetActive(false);
-            if (timer_done >= 35f)
+            model.luzamarilla.SetActive(true);
+            if (timer_done >= 45f)
             {
-                model.luzamarilla.SetActive(true);
-                timer_done = 0;
+                model.luzamarilla.SetActive(false);
+                
             }
 
         }
@@ -62,23 +50,29 @@ public class SemaforoController : MonoBehaviour
     }
     public void DescVerd()
     {
-        float t = 45f;
+        float t = model.tiempoverde;
         ChangeTime = t;
         timer_done += Time.deltaTime;
         if (timer_done >= ChangeTime)
-
         {
 
-            model.luzverde.SetActive(false);
-            if (timer_done >= 30f)
+            model.luzverde.SetActive(true);
+            if (timer_done >= 75f)
             {
-                model.luzverde.SetActive(true);
+                model.luzverde.SetActive(false);
                 timer_done = 0;
             }
 
         }
 
     }
+
+
+
+
+
+
+
 
 
 }

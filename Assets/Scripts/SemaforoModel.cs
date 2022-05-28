@@ -11,11 +11,11 @@ public class SemaforoModel : MonoBehaviour
 
     
     public float tiemporojo = 40f;
-    public float tiemporaa;
-    public float tiempoamar = 5f;
-    public float tiempoaav;
-    public float tiempoverde = 30;
+ 
+    public float tiempoamar = 40f;
 
-    // Start is called before the first frame update
+    public float tiempoverde = 45;
+
+  
 
 }

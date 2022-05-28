@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SemaforoView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SemaforoController controller;
 
-    // Update is called once per frame
+   
     void Update()
     {
-        
+
+        controller.DescVerd();
+        controller.DescAmar();
+        controller.DescRed();
     }
 }
