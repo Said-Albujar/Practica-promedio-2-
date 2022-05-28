@@ -1,0 +1,4 @@
+Luis Rojas Creacion de Escena, objetos y scripts 
+Bandry Melendez Controll Model
+Roberto Janampa Controll Controller part 1
+Said Albujar Controll View y Controll Controller part 2 
